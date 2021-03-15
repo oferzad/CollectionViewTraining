@@ -43,8 +43,8 @@ namespace CollectionViewTraining
     }
     class StudentList
     {
-        private List<Student> students;
-        public List<Student> Students 
+        private ObservableCollection<Student> students;
+        public ObservableCollection<Student> Students 
         { 
             get
             {
@@ -53,7 +53,7 @@ namespace CollectionViewTraining
         }
         public StudentList()
         {
-            students = new List<Student>();
+            students = new ObservableCollection<Student>();
             InitStudents();
         }
         private void InitStudents()

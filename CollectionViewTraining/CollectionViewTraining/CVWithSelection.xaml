@@ -25,7 +25,7 @@
                    Grid.Row="1"
                    Grid.Column="1" />
             </Grid>
-            <CollectionView ItemsSource="{Binding Students}" SelectionMode="Single"
+            <CollectionView ItemsSource="{Binding Students}" SelectionMode="Multiple"
                         SelectionChanged="CollectionView_SelectionChanged">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Span="1" Orientation="Vertical" />
