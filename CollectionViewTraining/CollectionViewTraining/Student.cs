@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using Xamarin.Forms;
+using System.Windows.Input;
 
 namespace CollectionViewTraining
 {
@@ -54,6 +56,7 @@ namespace CollectionViewTraining
         public StudentList()
         {
             students = new ObservableCollection<Student>();
+            
             InitStudents();
         }
         private void InitStudents()
@@ -99,5 +102,16 @@ namespace CollectionViewTraining
             });
 
         }
+
+        public ICommand DeleteCommand => new Command<Student>(RemoveStudent);
+
+        void RemoveStudent(Student st)
+        {
+            if (students.Contains(st))
+            {
+                students.Remove(st);
+            }
+        }
+
     }
 }

@@ -12,7 +12,8 @@ namespace CollectionViewTraining
 
             //MainPage = new MainPage();
             //MainPage = new CVWithSelection();
-            MainPage = new CVWithRefresh();
+            //MainPage = new CVWithRefresh();
+            MainPage = new CVWithContextMenu();
         }
 
         protected override void OnStart()
